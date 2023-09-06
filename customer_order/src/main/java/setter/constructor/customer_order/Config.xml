@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    
+    
+ 
+ 
+ <bean name="cus" class="setter.constructor.customer_order.Customer">
+ 
+ <property name="name">
+ 	<value>Ramadevi</value>
+ </property>
+ 
+ <property name="phno">
+ 	<value>8341100320</value>
+ </property>
+ 
+ <property name="address">
+<props>
+<prop key="Home1"> Rajampet </prop>
+<prop key="Home2"> Sainagar </prop>
+<prop key="Home3"> kadapa </prop>
+</props>
+ </property>
+ 
+ </bean>
+ 
+ 
+ 
+ 
+ 
+ <bean name="ord" class="setter.constructor.customer_order.Order">
+ 
+ <property name="productid">
+ 	<value>87264</value>
+ </property>
+ 
+ <property name="productname">
+ 	<value>Apple phone</value>
+ </property>
+ 
+ <property name="customer">
+<ref bean="cus"></ref>
+ </property>
+ 
+ </bean>
+   
+
+</beans>

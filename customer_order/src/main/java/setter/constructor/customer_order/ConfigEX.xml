@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    
+    
+ 
+ <bean name="Cu" class="setter.constructor.customer_order.Customer">
+ <constructor-arg value="Ramadevi" type="java.lang.String" index="0"/>
+ <constructor-arg value="8341100320" type="java.lang.String" index="1"/>
+ <constructor-arg index="2">
+ <props>
+ 	<prop key="home1">Kadapa</prop>
+ 	<prop key="home2">Rajampet</prop>
+ 	<prop key="home3">SaiNagar</prop>
+ </props>
+ </constructor-arg>
+ </bean>
+ 
+ 
+ 
+ 
+ <bean name="or" class="setter.constructor.customer_order.Order">
+ <constructor-arg value="123" type="java.lang.String" index="0"/>
+ <constructor-arg value="Smart watch" type="java.lang.String" index="1"/>
+ <constructor-arg ref="Cu" index="2"/>
+ </bean>
+
+</beans>
